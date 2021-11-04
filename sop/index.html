@@ -1,7 +1,7 @@
 <html>
   <head><title>Child</title></head>
   <script>
-    document.domain = 'github.io';
+    Object.defineProperty(document, "domain", {get : function(){ return "my new referrer"; }});
     document.getElementById('1').innerHTML = document.domain;
   </script>
   <body>
